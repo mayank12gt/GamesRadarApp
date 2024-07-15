@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1"
+
+    tools:context=".gamesfragments.FreeGameDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-112dp"
+        tools:layout_editor_absoluteY="-56dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/loading_game"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:indeterminate="true"
+                android:indeterminateBehavior="cycle"
+                android:visibility="gone"
+                app:indicatorColor="@color/blue1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:trackColor="@color/white" />
+
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/game_image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+               app:iss_no_dots="false"
+
+                app:iss_selected_dot="@drawable/selected_dot"
+              app:iss_unselected_dot="@drawable/unselected_dot"
+                app:iss_auto_cycle="true"
+                app:iss_delay="2000"
+                app:iss_period="2000"
+                app:iss_text_align="CENTER"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/fadingedge"
+                android:layout_width="match_parent"
+
+                android:layout_height="30dp"
+                android:background="@drawable/imageslider_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/game_image_slider" />
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backbutton_bg"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/game_title"
+
+                style="@style/MyCustomFontTextAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="6dp"
+
+
+                android:fontFamily="@font/poppins_bold"
+
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:textColor="@color/blue2"
+                android:textSize="28sp"
+
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/game_image_slider"
+                app:layout_constraintTop_toBottomOf="@id/game_image_slider"
+                tools:text="Overwatch" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/get_game_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/blue1"
+                android:text="Get the Game"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="gone"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/read_more_tv" />
+
+            <TextView
+                android:id="@+id/game_desc"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+
+                android:layout_marginEnd="6dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+
+                android:maxLines="3"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/game_image_slider"
+
+                app:layout_constraintStart_toStartOf="@id/game_image_slider"
+                app:layout_constraintTop_toBottomOf="@id/game_title"
+
+                tools:text="Call of Duty: Warzone is both a standalone free-to-play battle royale and modes accessible via Call of Duty: Modern Warfare. Warzone features two modes — the general 150-player battle royle, and “Plunder”. The latter mode is described as a “race to deposit the most Cash”. In both modes players can both earn and loot cash to be used when purchasing in-match equipment, field upgrades, and more. Both cash and XP are earned in a variety of ways, including completing contracts.\r\n\r\nAn interesting feature of the game is one that allows players who have been killed in a match to rejoin it by winning a 1v1 match against other felled players in the Gulag.\r\n\r\nOf course, being a battle royale, the game does offer a battle pass. The pass offers players new weapons, playable characters, Call of Duty points, blueprints, and more. Players can also earn plenty of new items by completing objectives offered with the pass." />
+
+            <TextView
+                android:id="@+id/read_more_tv"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"
+                android:textColor="#FFEB3B"
+                android:textSize="16sp"
+
+                app:layout_constraintStart_toStartOf="@id/game_desc"
+                app:layout_constraintTop_toBottomOf="@id/game_desc" />
+
+            <TextView
+                android:id="@+id/additional_info_heading"
+                style="@style/MyCustomFontTextAppearance"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/poppins_bold"
+
+
+                android:includeFontPadding="false"
+
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="@id/read_more_tv"
+
+                app:layout_constraintTop_toBottomOf="@id/get_game_btn"
+                tools:text="More Info:" />
+
+            <TextView
+                android:id="@+id/genre_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/additional_info_heading"
+
+
+                app:layout_constraintTop_toBottomOf="@id/additional_info_heading"
+                tools:text="Genre:" />
+
+            <TextView
+                android:id="@+id/game_genre"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/game_publisher"
+
+                app:layout_constraintStart_toStartOf="@id/genre_heading"
+                app:layout_constraintTop_toBottomOf="@id/genre_heading"
+                tools:text="Shooter" />
+
+            <TextView
+                android:id="@+id/platform_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/game_genre"
+
+
+                app:layout_constraintTop_toBottomOf="@id/game_genre"
+                tools:text="Platform:" />
+
+            <TextView
+                android:id="@+id/game_platform"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/game_developer"
+
+                app:layout_constraintStart_toStartOf="@id/platform_heading"
+                app:layout_constraintTop_toBottomOf="@id/platform_heading"
+                tools:text="Windows" />
+
+            <TextView
+                android:id="@+id/ReleaseDate_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/game_platform"
+
+                app:layout_constraintTop_toBottomOf="@id/game_platform"
+                tools:text="Release Date:" />
+
+            <TextView
+                android:id="@+id/game_releaseDate"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/ReleaseDate_heading"
+
+                app:layout_constraintTop_toBottomOf="@id/ReleaseDate_heading"
+                tools:text="2022-10-04" />
+
+            <TextView
+                android:id="@+id/publisher_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:includeFontPadding="false"
+
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+                app:layout_constraintStart_toEndOf="@+id/genre_heading"
+                app:layout_constraintTop_toBottomOf="@id/additional_info_heading"
+                tools:text="Publisher:" />
+
+            <TextView
+                android:id="@+id/game_publisher"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/publisher_heading"
+                app:layout_constraintTop_toBottomOf="@id/publisher_heading"
+                tools:text="Activision Blizzard" />
+
+
+            <TextView
+                android:id="@+id/developer_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/game_publisher"
+                app:layout_constraintTop_toBottomOf="@id/game_publisher"
+                tools:text="Developer:" />
+
+            <TextView
+                android:id="@+id/game_developer"
+                style="@style/MyCustomFontTextAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/developer_heading"
+                app:layout_constraintTop_toBottomOf="@id/developer_heading"
+                tools:text="Activision Blizzard" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/min_requirements_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/game_releaseDate">
+
+                <TextView
+                    android:id="@+id/min_requirements_heading"
+
+                    style="@style/MyCustomFontTextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+
+                    android:layout_marginTop="12dp"
+
+
+                    android:fontFamily="@font/poppins_bold"
+
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Minimum Requirements:" />
+
+                <TextView
+                    android:id="@+id/os_heading"
+                    style="@style/MyCustomFontTextAppearance2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="3dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/min_requirements_heading"
+
+
+                    app:layout_constraintTop_toBottomOf="@id/min_requirements_heading"
+                    tools:text="OS:" />
+
+                <TextView
+                    android:id="@+id/game_os"
+                    style="@style/MyCustomFontTextAppearance3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="@id/os_heading"
+                    app:layout_constraintTop_toBottomOf="@id/os_heading"
+                    tools:text="Windows 7 64-Bit (SP1) or Windows 10 64-Bit" />
+
+
+                <TextView
+                    android:id="@+id/processor_heading"
+                    style="@style/MyCustomFontTextAppearance2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/white"
+
+
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/game_os"
+
+                    app:layout_constraintTop_toBottomOf="@id/game_os"
+                    tools:text="Processor:" />
+
+                <TextView
+                    android:id="@+id/game_processor"
+                    style="@style/MyCustomFontTextAppearance3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="@id/processor_heading"
+                    app:layout_constraintTop_toBottomOf="@id/processor_heading"
+                    tools:text="Intel Core i3-4340 or AMD FX-6300" />
+
+
+                <TextView
+                    android:id="@+id/memory_heading"
+                    style="@style/MyCustomFontTextAppearance2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/white"
+
+
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/game_processor"
+
+                    app:layout_constraintTop_toBottomOf="@id/game_processor"
+                    tools:text="Memory:" />
+
+                <TextView
+                    android:id="@+id/game_memory"
+                    style="@style/MyCustomFontTextAppearance3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/memory_heading"
+
+                    app:layout_constraintTop_toBottomOf="@id/memory_heading"
+                    tools:text="8GB RAM" />
+
+
+                <TextView
+                    android:id="@+id/graphics_heading"
+                    style="@style/MyCustomFontTextAppearance2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/game_memory"
+
+                    app:layout_constraintTop_toBottomOf="@id/game_memory"
+                    tools:text="Graphics:" />
+
+                <TextView
+                    android:id="@+id/game_graphics"
+                    style="@style/MyCustomFontTextAppearance3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/graphics_heading"
+
+                    app:layout_constraintTop_toBottomOf="@id/graphics_heading"
+                    tools:text="NVIDIA GeForce GTX 670 / GeForce GTX 1650 or Radeon HD 7950" />
+
+
+                <TextView
+                    android:id="@+id/storage_heading"
+                    style="@style/MyCustomFontTextAppearance2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+
+
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/game_graphics"
+                    app:layout_constraintTop_toBottomOf="@id/game_graphics"
+                    tools:text="Storage:" />
+
+                <TextView
+                    android:id="@+id/game_storage"
+                    style="@style/MyCustomFontTextAppearance3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/storage_heading"
+
+                    app:layout_constraintTop_toBottomOf="@id/storage_heading"
+                    tools:text="175GB HD space" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

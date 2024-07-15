@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="9dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="9dp"
+    android:layout_marginBottom="5dp"
+
+
+    android:backgroundTint="@color/black_3"
+
+
+    app:cardCornerRadius="10dp"
+
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/game_image"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:scaleType="centerCrop"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="10dp" />
+
+        <TextView
+            android:id="@+id/game_title"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="6dp"
+
+            android:fontFamily="@font/poppins_bold"
+
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:textColor="@color/blue2"
+            android:textSize="22sp"
+
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@id/game_image"
+            app:layout_constraintTop_toTopOf="@id/game_image"
+            tools:text="Overwatch" />
+
+        <TextView
+            android:id="@+id/game_desc"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="6dp"
+
+            android:layout_marginEnd="6dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+
+            android:maxLines="3"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@id/game_image"
+            app:layout_constraintTop_toBottomOf="@id/game_title"
+
+            tools:text="A hero-focused first-person team shooter from Blizzard Entertainment." />
+
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/game_desc"
+            app:layout_constraintStart_toStartOf="@id/game_desc"
+
+            app:layout_constraintTop_toBottomOf="@+id/game_desc">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/game_info_chipgroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="6dp"
+
+                app:singleLine="true"
+
+                />
+        </HorizontalScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

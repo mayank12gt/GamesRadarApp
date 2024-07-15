@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:id="@+id/chip"
+
+
+    android:includeFontPadding="false"
+    android:textAppearance="@style/MyCustomFontTextAppearance3"
+    android:textColor="@color/white"
+    app:chipBackgroundColor="@color/green_1"
+    app:chipCornerRadius="8dp"
+    app:chipEndPadding="0dp"
+    app:chipStartPadding="0dp"
+    app:chipStrokeColor="@color/green_1"
+    app:chipStrokeWidth="1dp"
+    tools:text="Browser" />
+

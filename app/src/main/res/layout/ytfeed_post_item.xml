@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="9dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="9dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="6dp"
+    android:backgroundTint="@color/black_3"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/video_thumbnail"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="4dp" />
+
+        <TextView
+            android:id="@+id/video_title"
+            style="@style/MyCustomFontTextAppearance2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+
+            android:maxLines="2"
+            android:textColor="@color/blue1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/video_thumbnail"
+            tools:text="#19 Access Enquirer through Ace — Build a Node.js CLI with Ace" />
+
+
+
+
+        <TextView
+            android:id="@+id/video_channel"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+
+            android:ellipsize="end"
+            android:textColor="@color/white"
+
+            android:includeFontPadding="false"
+
+
+            android:maxLines="1"
+            style="@style/MyCustomFontTextAppearance3"
+
+
+
+
+            android:textSize="16sp"
+
+
+            app:layout_constraintStart_toStartOf="@id/video_title"
+            app:layout_constraintTop_toBottomOf="@id/video_title"
+            tools:text="Future Studio" />
+
+        <TextView
+            android:id="@+id/video_views"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="14dp"
+
+
+            android:ellipsize="end"
+            android:textColor="@color/white"
+
+            android:includeFontPadding="false"
+
+
+            android:maxLines="1"
+            android:textSize="16sp"
+
+
+            style="@style/MyCustomFontTextAppearance3"
+
+
+            app:layout_constraintStart_toEndOf="@id/video_channel"
+            app:layout_constraintTop_toTopOf="@id/video_channel"
+            app:layout_constraintBottom_toBottomOf="@id/video_channel"
+            tools:text="10,000 views" />
+        <TextView
+            android:id="@+id/video_date"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/white"
+
+
+
+            android:ellipsize="end"
+
+            android:includeFontPadding="false"
+
+
+            android:maxLines="1"
+            android:textSize="16sp"
+
+            style="@style/MyCustomFontTextAppearance3"
+
+
+            app:layout_constraintStart_toStartOf="@id/video_channel"
+            app:layout_constraintTop_toBottomOf="@id/video_channel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="3dp"
+            tools:text="18 Jun, 2023" />
+
+
+
+        <TextView
+            android:id="@+id/video_desc"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+
+
+            android:ellipsize="end"
+
+            android:includeFontPadding="false"
+
+
+            android:maxLines="3"
+
+
+            android:textSize="18sp"
+
+            app:layout_constraintEnd_toEndOf="@+id/video_title"
+            app:layout_constraintStart_toStartOf="@id/video_channel"
+            app:layout_constraintTop_toBottomOf="@id/video_channel"
+            tools:text="This is a free series showing you how to build a command line interface (CLI) with Node.js Enquirer is a prompt system for Node.js. Ask the user questions on the command line. Ace integrates Enquirer and lets you access it through the package import 💻 Series GitHub Repo ► " />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

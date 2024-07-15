@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+
+
+
+    <color name="blue1">#257EEA</color>
+    <color name="blue2">#0E69D6</color>
+    <color name="black_1">#0E0D0D</color>
+    <color name="black_2">#050505</color>
+    <color name="black_3">#ff171717</color>
+    <color name="green_1">#147A2A</color>
+    <color name="yellow_1">#FDD835</color>
+    <color name="red_1">@android:color/holo_red_light</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#257EEA</color>
+
+
+</resources>

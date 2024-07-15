@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1">
+
+    <TextView
+        android:id="@+id/filter_heading"
+        style="@style/MyCustomFontTextAppearance2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="12dp"
+        android:text="Filter"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerColor="@color/blue2"
+        app:dividerThickness="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_heading" />
+
+    <TextView
+        android:id="@+id/Platform_tv"
+        style="@style/MyCustomFontTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:text="Platform"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/platformtextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+
+
+        android:hint="Platform"
+
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/black_3"
+        app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Platform_tv">
+
+        <AutoCompleteTextView
+            android:id="@+id/platform_spinner"
+
+            style="@style/MyCustomFontTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/giveaway_type_chipgroup_tv"
+        style="@style/MyCustomFontTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:text="Type"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/platformtextField" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/giveaway_type_chipgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/giveaway_type_chipgroup_tv"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Game_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:includeFontPadding="false"
+            android:text="Game"
+            android:textAppearance="@style/MyCustomFontTextAppearance3"
+            android:textColor="@color/chip_text_color_selector"
+            app:chipBackgroundColor="@color/chip_color_selector"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeColor="@color/blue2"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Loot_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Loot"
+            android:textAppearance="@style/MyCustomFontTextAppearance3"
+            android:textColor="@color/chip_text_color_selector"
+            app:chipBackgroundColor="@color/chip_color_selector"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeColor="@color/blue2"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Beta_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Beta"
+            android:textAppearance="@style/MyCustomFontTextAppearance3"
+            android:textColor="@color/chip_text_color_selector"
+            app:chipBackgroundColor="@color/chip_color_selector"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeColor="@color/blue2"
+            app:chipStrokeWidth="1dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/Sort_By_tv"
+        style="@style/MyCustomFontTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:text="Sort By"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/giveaway_type_chipgroup" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/sortby_chipgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@id/Sort_By_tv"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Popularity_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Popularity"
+            android:textAppearance="@style/MyCustomFontTextAppearance3"
+            android:textColor="@color/chip_text_color_selector"
+            app:chipBackgroundColor="@color/chip_color_selector"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeColor="@color/blue2"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Date_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Date"
+            android:textAppearance="@style/MyCustomFontTextAppearance3"
+            android:textColor="@color/chip_text_color_selector"
+            app:chipBackgroundColor="@color/chip_color_selector"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeColor="@color/blue2"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Value_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Value"
+            android:textAppearance="@style/MyCustomFontTextAppearance3"
+            android:textColor="@color/chip_text_color_selector"
+            app:chipBackgroundColor="@color/chip_color_selector"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeColor="@color/blue2"
+            app:chipStrokeWidth="1dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <Button
+        android:id="@+id/apply_btn"
+        style="@style/MyCustomFontTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+
+
+        android:backgroundTint="@color/blue2"
+        android:text="Apply"
+
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/sortby_chipgroup" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        style="@style/MyCustomFontTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="@color/black_3"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Reset"
+        android:textAllCaps="false"
+        android:textColor="@color/blue2"
+
+
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortby_chipgroup" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

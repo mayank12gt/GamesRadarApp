@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="9dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="9dp"
+    android:layout_marginBottom="5dp"
+    android:backgroundTint="@color/black_3"
+
+
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="6dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/post_Image"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="10dp" />
+
+        <TextView
+            android:id="@+id/post_Title"
+            style="@style/MyCustomFontTextAppearance"
+
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+
+            android:fontFamily="@font/poppins_semibold"
+
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:textColor="@color/blue2"
+            android:textSize="22sp"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_Image"
+            tools:text="Detective Pikachu Returns" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/post_Desc"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+
+
+
+            android:maxLines="3"
+
+            android:textColor="@color/white"
+
+
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toEndOf="@id/post_Title"
+            app:layout_constraintStart_toStartOf="@id/post_Title"
+            app:layout_constraintTop_toBottomOf="@id/post_Title"
+        tools:text="Unravel a series of mysteries across Ryme City with a tough-talking, coffee-loving Pikachu who calls himself a great detective. This Pikachu may have a self-assured attitude and talk like a middle-aged man, but he somehow manages to keep his lovable charm. Together with his partner Tim Goodman, this great detective duo cracks several cases with the help of the many Pokemon and people who live in Ryme City. Search for clues in Ryme City, where Pokemon and humans coexist in harmony. With the help of many other Pokemon, Tim and his talkative Pikachu partner work together to solve a series of mysterious incidents in this cinematic adventure game." />
+
+
+        <TextView
+            android:id="@+id/post_Date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="#EAE9E9"
+            android:layout_marginTop="6dp"
+            android:textSize="16sp"
+
+            app:layout_constraintStart_toStartOf="@+id/post_Title"
+
+            app:layout_constraintTop_toBottomOf="@+id/post_Desc"
+            tools:text="15 Sep, 2023" />
+
+        <TextView
+            android:id="@+id/post_Source"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:maxLines="1"
+            android:ellipsize="end"
+
+            android:includeFontPadding="false"
+
+            android:textColor="#EAE9E9"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintStart_toStartOf="@+id/post_Date"
+            app:layout_constraintTop_toBottomOf="@+id/post_Date"
+
+            tools:text="GameSpot - New Game Releases"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

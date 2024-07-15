@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">GamesRadar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="types">
+
+        <item>Bank</item>
+        <item>Gym</item>
+        <item>Hospital</item>
+        <item>Library</item>
+        <item>Museum</item>
+        <item>Park</item>
+        <item>Parking</item>
+        <item>Police</item>
+        <item>Restaurant</item>
+        <item>School</item>
+        <item>Stadium</item>
+        <item>Supermarket</item>
+
+    </string-array>
+
+    <string-array name="game_genres">
+        <item>mmorpg</item>
+        <item>shooter</item>
+        <item>strategy</item>
+        <item>moba</item>
+        <item>racing</item>
+        <item>sports</item>
+        <item>social</item>
+        <item>sandbox</item>
+        <item>open-world</item>
+        <item>survival</item>
+        <item>pvp</item>
+        <item>pve</item>
+        <item>pixel</item>
+        <item>voxel</item>
+        <item>zombie</item>
+        <item>turn-based</item>
+        <item>first-person</item>
+        <item>third-person</item>
+        <item>top-down</item>
+        <item>tank</item>
+        <item>space</item>
+        <item>sailing</item>
+        <item>side-scroller</item>
+        <item>superhero</item>
+        <item>permadeath</item>
+        <item>card</item>
+        <item>battle-royale</item>
+        <item>mmo</item>
+        <item>mmofps</item>
+        <item>mmotps</item>
+        <item>3d</item>
+        <item>2d</item>
+        <item>anime</item>
+        <item>fantasy</item>
+        <item>sci-fi</item>
+        <item>fighting</item>
+        <item>action-rpg</item>
+        <item>action</item>
+        <item>military</item>
+        <item>martial-arts</item>
+        <item>flight</item>
+        <item>low-spec</item>
+        <item>tower-defense</item>
+        <item>horror</item>
+        <item>mmorts</item>
+    </string-array>
+
+
+    <string-array name="platforms">
+        <item>pc</item>
+        <item>steam</item>
+        <item>epic-games-store</item>
+        <item>ubisoft</item>
+        <item>gog</item>
+        <item>itchio</item>
+        <item>ps4</item>
+        <item>ps5</item>
+        <item>xbox-one</item>
+        <item>xbox-series-xs</item>
+        <item>switch</item>
+        <item>android</item>
+        <item>ios</item>
+        <item>vr</item>
+        <item>battlenet</item>
+        <item>origin</item>
+        <item>drm-free</item>
+        <item>xbox-360</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1"
+
+    tools:context=".gamesfragments.FreeGameDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-112dp"
+        tools:layout_editor_absoluteY="-56dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/loading_giveaway"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:indeterminate="true"
+                android:indeterminateBehavior="cycle"
+                android:visibility="gone"
+                app:indicatorColor="@color/blue1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:trackColor="@color/white" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/giveaway_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/fadingedge"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/imageslider_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/giveaway_image" />
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backbutton_bg"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/giveaway_title"
+
+                style="@style/MyCustomFontTextAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="6dp"
+
+
+                android:fontFamily="@font/poppins_bold"
+
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:textColor="@color/blue2"
+                android:textSize="25sp"
+
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/giveaway_image"
+                app:layout_constraintTop_toBottomOf="@id/giveaway_image"
+                tools:text="Paws Effect: My Dogs Are Human! (Itch.io) Giveaway" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/get_giveaway_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/blue1"
+                android:text="Go to Giveaway"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/giveaway_instructions" />
+
+            <TextView
+                android:id="@+id/giveaway_desc"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+
+                android:layout_marginEnd="6dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+
+                android:maxLines="3"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/giveaway_image"
+
+                app:layout_constraintStart_toStartOf="@id/giveaway_image"
+                app:layout_constraintTop_toBottomOf="@id/giveaway_users"
+
+                tools:text="Grab Paws Effect: My Dogs Are Human! for free on Itch.io! Paws  Effect: My Dogs Are Human! is a comedic visual novel where dogs transform into people!" />
+
+            <TextView
+                android:id="@+id/giveaway_users"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="6dp"
+                style="@style/MyCustomFontTextAppearance2"
+
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+
+                android:textColor="#6ADC31"
+                android:textSize="18sp"
+                android:layout_marginEnd="6dp"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/giveaway_title"
+
+                tools:text="1490 users have claimed this giveawayDetails" />
+
+            <TextView
+                android:id="@+id/read_more_tv"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"
+                android:textColor="#FFEB3B"
+                android:textSize="16sp"
+
+                app:layout_constraintStart_toStartOf="@id/giveaway_desc"
+                app:layout_constraintTop_toBottomOf="@id/giveaway_desc" />
+
+            <TextView
+                android:id="@+id/giveaway_instructions_heading"
+                style="@style/MyCustomFontTextAppearance"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/poppins_bold"
+
+
+                android:includeFontPadding="false"
+
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="@id/read_more_tv"
+
+                app:layout_constraintTop_toBottomOf="@id/giveaway_desc"
+                tools:text="Instructions:" />
+
+            <TextView
+                android:id="@+id/giveaway_instructions"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/giveaway_instructions_heading"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/giveaway_instructions_heading"
+                tools:text="1. Click the button Download or Claim before the offer expires.\r\n2. Login into your itch.io account to access the game." />
+
+            <TextView
+                android:id="@+id/additional_info_heading"
+                style="@style/MyCustomFontTextAppearance"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/poppins_bold"
+
+
+                android:includeFontPadding="false"
+
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="@id/read_more_tv"
+
+                app:layout_constraintTop_toBottomOf="@id/get_giveaway_btn"
+                tools:text="More Info:" />
+
+
+            <TextView
+                android:id="@+id/worth_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/additional_info_heading"
+
+
+                app:layout_constraintTop_toBottomOf="@id/additional_info_heading"
+                tools:text="Worth:" />
+
+            <TextView
+                android:id="@+id/giveaway_worth"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/giveaway_platform"
+
+                app:layout_constraintStart_toStartOf="@id/worth_heading"
+                app:layout_constraintTop_toBottomOf="@id/worth_heading"
+                tools:text="$7.99" />
+
+            <TextView
+                android:id="@+id/type_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/giveaway_worth"
+
+
+                app:layout_constraintTop_toBottomOf="@id/giveaway_worth"
+                tools:text="Type:" />
+
+            <TextView
+                android:id="@+id/giveaway_type"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/giveaway_published_date"
+
+                app:layout_constraintStart_toStartOf="@id/type_heading"
+                app:layout_constraintTop_toBottomOf="@id/type_heading"
+                tools:text="Game" />
+
+            <TextView
+                android:id="@+id/status_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/giveaway_type"
+
+                app:layout_constraintTop_toBottomOf="@id/giveaway_type"
+                tools:text="Status:" />
+
+            <TextView
+                android:id="@+id/giveaway_status"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/status_heading"
+
+                app:layout_constraintTop_toBottomOf="@id/status_heading"
+                tools:text="Active" />
+
+            <TextView
+                android:id="@+id/platform_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:includeFontPadding="false"
+
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+                app:layout_constraintStart_toEndOf="@+id/worth_heading"
+                app:layout_constraintTop_toBottomOf="@id/additional_info_heading"
+                tools:text="Platforms:" />
+
+            <TextView
+                android:id="@+id/giveaway_platform"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/platform_heading"
+                app:layout_constraintTop_toBottomOf="@id/platform_heading"
+                tools:text="PC, Itch.io, DRM-Free" />
+
+
+            <TextView
+                android:id="@+id/published_date_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/giveaway_platform"
+                app:layout_constraintTop_toBottomOf="@id/giveaway_platform"
+                tools:text="Published Date:" />
+
+            <TextView
+                android:id="@+id/giveaway_published_date"
+                style="@style/MyCustomFontTextAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/published_date_heading"
+                app:layout_constraintTop_toBottomOf="@id/published_date_heading"
+                tools:text="2023-09-26" />
+
+
+            <TextView
+                android:id="@+id/end_date_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/giveaway_published_date"
+                app:layout_constraintTop_toBottomOf="@id/giveaway_published_date"
+                tools:text="End Date:" />
+
+            <TextView
+                android:id="@+id/giveaway_end_date"
+                style="@style/MyCustomFontTextAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/end_date_heading"
+                app:layout_constraintTop_toBottomOf="@id/end_date_heading"
+                tools:text="2023-09-29" />
+
+
+            <!--<TextView
+                android:id="@+id/additional_info_heading"
+                style="@style/MyCustomFontTextAppearance"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/poppins_bold"
+
+
+                android:includeFontPadding="false"
+
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="@id/read_more_tv"
+
+                app:layout_constraintTop_toBottomOf="@id/get_game_btn"
+                tools:text="More Info:" />
+
+            <TextView
+                android:id="@+id/genre_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/additional_info_heading"
+
+
+                app:layout_constraintTop_toBottomOf="@id/additional_info_heading"
+                tools:text="Genre:" />
+
+            <TextView
+                android:id="@+id/game_genre"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/game_publisher"
+
+                app:layout_constraintStart_toStartOf="@id/genre_heading"
+                app:layout_constraintTop_toBottomOf="@id/genre_heading"
+                tools:text="Shooter" />
+
+            <TextView
+                android:id="@+id/platform_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/game_genre"
+
+
+                app:layout_constraintTop_toBottomOf="@id/game_genre"
+                tools:text="Platform:" />
+
+            <TextView
+                android:id="@+id/game_platform"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/game_developer"
+
+                app:layout_constraintStart_toStartOf="@id/platform_heading"
+                app:layout_constraintTop_toBottomOf="@id/platform_heading"
+                tools:text="Windows" />
+
+            <TextView
+                android:id="@+id/ReleaseDate_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/game_platform"
+
+                app:layout_constraintTop_toBottomOf="@id/game_platform"
+                tools:text="Release Date:" />
+
+            <TextView
+                android:id="@+id/game_releaseDate"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/ReleaseDate_heading"
+
+                app:layout_constraintTop_toBottomOf="@id/ReleaseDate_heading"
+                tools:text="2022-10-04" />
+
+            <TextView
+                android:id="@+id/publisher_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:includeFontPadding="false"
+
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+                app:layout_constraintStart_toEndOf="@+id/genre_heading"
+                app:layout_constraintTop_toBottomOf="@id/additional_info_heading"
+                tools:text="Publisher:" />
+
+            <TextView
+                android:id="@+id/game_publisher"
+                style="@style/MyCustomFontTextAppearance3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/publisher_heading"
+                app:layout_constraintTop_toBottomOf="@id/publisher_heading"
+                tools:text="Activision Blizzard" />
+
+
+            <TextView
+                android:id="@+id/developer_heading"
+                style="@style/MyCustomFontTextAppearance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/game_publisher"
+                app:layout_constraintTop_toBottomOf="@id/game_publisher"
+                tools:text="Developer:" />
+
+            <TextView
+                android:id="@+id/game_developer"
+                style="@style/MyCustomFontTextAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="@id/developer_heading"
+                app:layout_constraintTop_toBottomOf="@id/developer_heading"
+                tools:text="Activision Blizzard" />-->
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    app:cardElevation="6dp"
+    app:cardCornerRadius="2dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:backgroundTint="#ff171717"
+
+
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+
+
+
+    >
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/post_Image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="2dp"
+
+        android:scaleType="centerCrop"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="2dp" />
+
+
+    <TextView
+        android:id="@+id/post_Title"
+        style="@style/MyCustomFontTextAppearance2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+
+        android:layout_marginEnd="4dp"
+
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+
+        android:maxLines="2"
+        android:textColor="@color/blue1"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/post_Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="As Inferno Grew, Lahaina’s Water System Collapsed" />
+
+
+    <TextView
+        android:id="@+id/post_Date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:textColor="#EAE9E9"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toStartOf="@+id/post_Title"
+
+        app:layout_constraintTop_toBottomOf="@+id/post_Title"
+        tools:text="15 Sep, 2023" />
+
+    <TextView
+        android:id="@+id/post_Source"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:maxLines="1"
+        android:ellipsize="end"
+
+        android:includeFontPadding="false"
+        android:layout_marginTop="2dp"
+        android:textColor="#EAE9E9"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/post_Title"
+
+
+        app:layout_constraintStart_toStartOf="@+id/post_Title"
+        app:layout_constraintTop_toBottomOf="@+id/post_Date"
+        tools:text="Better Programming - Medium" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

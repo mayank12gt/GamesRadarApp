@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".gamesfragments.FreeGamesFragment">
+
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:trackColor="@color/white"
+        app:indicatorColor="@color/blue1"
+        android:id="@+id/loading_games"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:id="@+id/free_games_rv"
+            tools:listitem="@layout/freegameitem"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/free_games_filter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_semibold"
+        app:icon="@drawable/filter"
+        android:backgroundTint="@color/blue1"
+
+
+        android:text="Filter"
+        android:textColor="@color/white"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/free_games_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
