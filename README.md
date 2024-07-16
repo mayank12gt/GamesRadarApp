@@ -1,5 +1,7 @@
 # About
 This is an android app to find latest giveaways from multiple platforms like steam, epic, itch.io etc. and free to play PC/Browser video games. You can also watch latest video game trailers and read news articles about video games and their reviews from multiple sources
+![Apple iPhone 11 Pro Max Screenshot 6-imageonline co-merged (1)](https://github.com/user-attachments/assets/e094c7ed-173e-40d0-a306-cf9d9ef9e032)
+
 # Screenshots
 ## Giveaways
 
